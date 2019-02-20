@@ -1,6 +1,6 @@
 private double fractionLength = .8; 
 private int smallestBranch = 10; 
-private double branchAngle = .2;  
+private double branchAngle = (Math.random() * 3) * .2;  
 public void setup() 
 {   
 	size(640,480);    
@@ -30,3 +30,8 @@ public void drawBranches(int x,int y, double branchLength, double angle)
     drawBranches(endX2,endY2,branchLength,angle2);
   }
 } 
+public void mousePressed()
+{
+   branchAngle = (Math.random() * 3) * .2;
+   redraw();
+}
